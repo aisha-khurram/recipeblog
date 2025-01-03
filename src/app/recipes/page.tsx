@@ -3,7 +3,7 @@ import Header from "@/app/components/Header"
 import Footer from "@/app/components/Footer"
 
 export interface Recipe {
-  id: number
+  id: string
   title: string
   content: string
   image:string
@@ -11,26 +11,26 @@ export interface Recipe {
 
 export const recipes: Recipe[] = [
   {
-    id: 1,
+    id: "1",
     title: 'Strawberry Shortcake',
     content: 'Fluffy and Yummy strawbwerry Dessert ...',
     image:"/images/cake.jpg"
   },
   {
-    id: 2,
+    id: "2",
     title: 'Nachos and Salsa',
     content: 'A filling and appetizing Mexican Snack...',
     image:"/images/salsa.jpg"
   },
   {
-    id: 3,
+    id: "3",
     title: 'Beef Burger ',
     content: 'Juicy patties and velevty buns...',
     image:"/images/burger.jpg"
   },
 ]
 
-export default function RecipesPage() {
+export default function Recipes() {
   return (
     <div className="max-w-2xl mx-auto py-8 px-4">
       <Header />
@@ -42,6 +42,7 @@ export default function RecipesPage() {
               {recipe.title}
             </Link>
           </li>
+          
         ))}
       </ul>
       <Footer />

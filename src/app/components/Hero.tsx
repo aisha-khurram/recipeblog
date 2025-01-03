@@ -9,7 +9,6 @@ interface HeroProps {
 }
 
 export default function Hero({ recipes }: HeroProps) {
-    if (!recipes) return null; // Safeguard against missing data
 
     return (
         <section className="bg-gray-100 py-8">
@@ -27,7 +26,7 @@ export default function Hero({ recipes }: HeroProps) {
                             />
                             <div className="text-center mt-2">
                                 <h3 className="text-lg font-semibold underline hover:text-purple-600">
-                                    <Link href={`/recipes/${encodeURIComponent(recipe.title)}`} className="text-blue-600 hover:underline">
+                                    <Link href={`/recipes/${recipe.id}`} className="text-blue-600 hover:underline">
                                         {recipe.title}
                                     </Link>
                                 </h3>

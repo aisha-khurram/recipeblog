@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Recipe } from "../lib/data";
+import { Recipe } from "../recipes/page";
 
 interface HeroProps {
     recipes: Recipe[]; // Use the Recipe interface

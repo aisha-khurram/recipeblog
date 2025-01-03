@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
-import { recipes } from "@/app/lib/data";
 import Gallery from "./components/Gallery";
 import Testimonial from "./components/Testimonial";
+import { recipes } from "./recipes/page";
 
 // Dynamically import the Hero component (client component)
 const Hero = dynamic(() => import("@/app/components/Hero"), { ssr: false });
